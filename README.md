@@ -1,11 +1,32 @@
+# Maa Parmeswari Cons Private Limited
 
-  # Homepage Wireframe Design
+Official website for **Maa Parmeswari Cons Private Limited**, a company engaged in construction, infrastructure development, and manufacturing.
 
-  This is a code bundle for Homepage Wireframe Design. The original project is available at https://www.figma.com/design/vRzPw2SJCG6KMK2DCboQxI/Homepage-Wireframe-Design.
+---
 
-  ## Running the code
+## 🏗️ About the Company
 
-  Run `npm i` to install the dependencies.
+Maa Parmeswari Cons Private Limited is involved in:
+- Construction of residential, commercial, and industrial buildings  
+- Development of roads and railway infrastructure  
+- Manufacture of paper and paper products  
 
-  Run `npm run dev` to start the development server.
-  
+The company operates with a strong focus on quality, safety, compliance, and long-term growth.
+
+---
+
+## 🛠️ Tech Stack
+
+- React / Next.js  
+- TypeScript  
+- Tailwind CSS  
+- Framer Motion  
+- Lucide Icons  
+
+---
+
+## ⚙️ Local Setup Instructions
+
+1. Install dependencies:
+```bash
+npm install
