@@ -94,8 +94,8 @@ export function EnhancedContact() {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               {[
-                { label: "Full Name", name: "name", type: "text", placeholder: "John Doe" },
-                { label: "Email Address", name: "email", type: "email", placeholder: "john@example.com" },
+                { label: "Full Name", name: "name", type: "text", placeholder: "Name" },
+                { label: "Email Address", name: "email", type: "email", placeholder: "@gmail.com" },
                 { label: "Phone Number", name: "phone", type: "tel", placeholder: "+91 XXXXX XXXXX" },
               ].map((field) => (
                 <div key={field.name}>
