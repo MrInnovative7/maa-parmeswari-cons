@@ -1,11 +1,11 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Building2, Train, Factory } from "lucide-react";
 
 const services = [
   {
     title: "Construction & Building",
     description:
-      "Delivering high-quality residential, commercial and industrial construction solutions with modern engineering practices.",
+      "Our Construction and Building service is committed to delivering top-notch solutions for residential, commercial, and industrial projects.",
     icon: Building2,
     image:
       "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
@@ -15,7 +15,7 @@ const services = [
   {
     title: "Roads & Railways",
     description:
-      "Developing durable roads and railway infrastructure with advanced machinery and strict quality standards.",
+      "Our expertise in civil engineering focuses on building reliable and efficient infrastructure across roads and railway networks.",
     icon: Train,
     image:
       "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
@@ -25,10 +25,10 @@ const services = [
   {
     title: "Paper Manufacturing",
     description:
-      "Our upcoming manufacturing division will focus on high-quality paper production for industrial and commercial needs.",
+      "At Maa Parmeswari Cons Pvt. Ltd., we manufacture high-quality paper products for diverse industrial and commercial needs.",
     icon: Factory,
     image:
-      "https://images.unsplash.com/photo-1581093588401-22f7f9e9d8d1",
+      "https://images.unsplash.com/photo-1581092583537-20d51b4b4f1b",
     active: false,
     color: "from-green-500 to-green-600",
   },
@@ -36,13 +36,10 @@ const services = [
 
 export function EnhancedServices() {
   return (
-    <section
-      id="services"
-      className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white"
-    >
+    <section id="services" className="py-16 md:py-20 bg-gray-50">
       <div className="max-w-[1440px] mx-auto px-6 md:px-8">
 
-        {/* Section Heading */}
+        {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
             Our <span className="text-blue-600">Services</span>
@@ -53,7 +50,7 @@ export function EnhancedServices() {
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {services.map((service, index) => {
@@ -62,23 +59,21 @@ export function EnhancedServices() {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="group relative bg-white rounded-2xl shadow-lg overflow-hidden border hover:shadow-2xl transition-all duration-300"
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 group"
               >
 
                 {/* Image */}
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
                   <img
                     src={service.image}
-                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${
-                      !service.active ? "opacity-60" : ""
-                    }`}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                   />
 
-                  {/* Coming Soon Badge */}
                   {!service.active && (
                     <div className="absolute top-4 right-4 bg-yellow-400 text-black text-xs px-3 py-1 rounded-full font-semibold">
                       Coming Soon
@@ -86,14 +81,13 @@ export function EnhancedServices() {
                   )}
                 </div>
 
-                {/* Card Content */}
+                {/* Content */}
                 <div className="p-6">
 
-                  {/* Icon */}
                   <div
-                    className={`w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br ${service.color} text-white mb-4`}
+                    className={`w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br ${service.color} text-white mb-4`}
                   >
-                    <Icon size={26} />
+                    <Icon size={22} />
                   </div>
 
                   <h3 className="text-xl font-semibold mb-2">
@@ -104,24 +98,24 @@ export function EnhancedServices() {
                     {service.description}
                   </p>
 
-                  {/* Button */}
-                  <div className="mt-5">
+                  <div className="mt-4">
                     {service.active ? (
-                      <button className="text-blue-600 font-medium hover:underline">
+                      <span className="text-blue-600 font-medium cursor-pointer hover:underline">
                         Learn More →
-                      </button>
+                      </span>
                     ) : (
                       <span className="text-gray-400 font-medium">
                         Launching Soon
                       </span>
                     )}
                   </div>
-                </div>
 
+                </div>
               </motion.div>
             );
           })}
         </div>
+
       </div>
     </section>
   );
