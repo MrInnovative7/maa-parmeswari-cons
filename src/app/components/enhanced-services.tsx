@@ -7,8 +7,7 @@ const services = [
     description:
       "Our Construction and Building service is committed to delivering top-notch solutions for residential, commercial, and industrial projects.",
     icon: Building2,
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+    image: "/images/construction.png",
     active: true,
     color: "from-blue-500 to-blue-600",
   },
@@ -17,8 +16,7 @@ const services = [
     description:
       "Our expertise in civil engineering focuses on building reliable and efficient infrastructure across roads and railway networks.",
     icon: Train,
-    image:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+    image: "/images/rail.png",
     active: true,
     color: "from-purple-500 to-purple-600",
   },
@@ -27,8 +25,7 @@ const services = [
     description:
       "At Maa Parmeswari Cons Pvt. Ltd., we manufacture high-quality paper products for diverse industrial and commercial needs.",
     icon: Factory,
-    image:
-      "https://images.unsplash.com/photo-1581092583537-20d51b4b4f1b",
+    image: "/images/paper.png",
     active: false,
     color: "from-green-500 to-green-600",
   },
