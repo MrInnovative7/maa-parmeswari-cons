@@ -15,6 +15,7 @@ export function EnhancedHero() {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % images.length);
     }, 5000);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -47,7 +48,7 @@ export function EnhancedHero() {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            {/* ✅ FIXED: Welcome to – infinite word bounce */}
+            {/* Welcome text animation */}
             <div className="inline-flex gap-3 px-7 py-3 bg-blue-100 text-blue-700 rounded-full text-2xl md:text-3xl font-bold tracking-wide">
               {["Welcome", "to"].map((word, index) => (
                 <motion.span
@@ -97,26 +98,26 @@ export function EnhancedHero() {
             </div>
           </motion.div>
 
-          {/* IMAGE – PAGE FLIP */}
+          {/* IMAGE STACK + PAGE FLIP */}
           <div
             className="relative w-full h-[420px] flex items-center justify-center"
             style={{ perspective: "1200px" }}
           >
-            {/* Back */}
+            {/* Back Image */}
             <img
               src={images[(activeIndex + 1) % images.length]}
               className="absolute w-[90%] h-[90%] object-cover rounded-2xl shadow-xl rotate-[-8deg] translate-x-[-30px] translate-y-[20px] opacity-30"
               aria-hidden
             />
 
-            {/* Middle */}
+            {/* Middle Image */}
             <img
               src={images[(activeIndex + 2) % images.length]}
               className="absolute w-[92%] h-[92%] object-cover rounded-2xl shadow-2xl rotate-[-4deg] translate-x-[-15px] translate-y-[10px] opacity-60"
               aria-hidden
             />
 
-            {/* Front flip */}
+            {/* Front Image Flip */}
             <AnimatePresence mode="wait">
               <motion.img
                 key={activeIndex}
@@ -133,19 +134,6 @@ export function EnhancedHero() {
                 }}
               />
             </AnimatePresence>
-
-            {/* ISO Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1 }}
-              className="absolute -top-4 -right-4 bg-white px-4 py-3 rounded-xl shadow-xl"
-            >
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">ISO</div>
-                <div className="text-xs text-gray-600">Certified</div>
-              </div>
-            </motion.div>
           </div>
 
         </div>
