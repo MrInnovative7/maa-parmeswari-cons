@@ -178,15 +178,17 @@ export function EnhancedContact() {
             })}
 
             {/* ✅ REAL GOOGLE MAP */}
-            <div className="rounded-2xl overflow-hidden shadow-xl h-[280px]">
-              <iframe
-                title="Maa Construction Buxar"
-                src="https://www.google.com/maps?q=25.5702656,83.9815571&output=embed"
-                className="w-full h-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+        <div className="h-60 rounded-xl overflow-hidden shadow-md">
+           <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d814.1585233568103!2d83.995922!3d25.5817184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399275ca1ac84ab5%3A0xa8122e9a8d837226!2sHXJW%2BQFX%2C%20Viswamitra%20Colony%2C%20Buxar%2C%20Bihar%20802116!5e1!3m2!1sen!2sin!4v1773587123030!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+           ></iframe>
+        </div>
           </motion.div>
         </div>
       </div>
