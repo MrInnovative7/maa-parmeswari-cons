@@ -181,7 +181,7 @@ export function EnhancedContact() {
             <div className="rounded-2xl overflow-hidden shadow-xl h-[280px]">
               <iframe
                 title="Maa Construction Buxar"
-                src="https://www.google.com/maps?q=Maa+Construction+Buxar&output=embed"
+                src="https://maps.app.goo.gl/mVgUbM6XAaR448Le7"
                 className="w-full h-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
