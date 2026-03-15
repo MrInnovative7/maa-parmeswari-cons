@@ -47,11 +47,7 @@ export function EnhancedContact() {
       title: "Email",
       details: ["maaparmeswaricpl@gmail.com"],
     },
-    {
-      icon: Phone,
-      title: "Phone",
-      details: ["+91 XXXXX XXXXX"],
-    },
+    
     {
       icon: Clock,
       title: "Business Hours",
