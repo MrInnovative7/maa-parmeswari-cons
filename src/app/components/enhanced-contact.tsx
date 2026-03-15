@@ -39,7 +39,7 @@ export function EnhancedContact() {
       icon: MapPin,
       title: "Address",
       details: [
-        "C/O Sri Ravi Ranjan Tiwary, Niranjanpur Golambar, Buxar, Bihar – 802116",
+        "Viswamitra Colony, Niranjanpur Golambar, Buxar, Bihar – 802116",
       ],
     },
     {
