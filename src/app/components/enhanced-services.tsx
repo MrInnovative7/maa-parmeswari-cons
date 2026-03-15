@@ -7,7 +7,7 @@ const services = [
     description:
       "Our Construction and Building service is committed to delivering top-notch solutions for residential, commercial, and industrial projects.",
     icon: Building2,
-    image: "/images/construction.png",
+    image: "/Construction.png",
     active: true,
     color: "from-blue-500 to-blue-600",
   },
@@ -16,7 +16,7 @@ const services = [
     description:
       "Our expertise in civil engineering focuses on building reliable and efficient infrastructure across roads and railway networks.",
     icon: Train,
-    image: "/images/rail.png",
+    image: "/Rail.png",
     active: true,
     color: "from-purple-500 to-purple-600",
   },
