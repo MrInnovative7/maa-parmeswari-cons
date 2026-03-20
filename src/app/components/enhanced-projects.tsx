@@ -4,7 +4,10 @@ const images = [
   "/Construction.png",
   "/Image1.png",
   "/Rail.png",
-  "/Image1.png",
+  "/Image2.png",
+  "/Image3.jpeg",
+  "/Image4.jpeg",
+  "/Image5.jpeg",
 ];
 
 export function EnhancedProjects() {
