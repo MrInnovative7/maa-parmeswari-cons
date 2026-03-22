@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { useRef, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 
 const images = [
   "/Construction.png",
@@ -12,16 +12,21 @@ const images = [
 ];
 
 export function EnhancedProjects() {
+  const containerRef = useRef(null);
+  const [width, setWidth] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  // double images for seamless loop
   const loopImages = [...images, ...images];
 
+  // 👉 calculate full width dynamically
+  useEffect(() => {
+    if (containerRef.current) {
+      setWidth(containerRef.current.scrollWidth / 2);
+    }
+  }, []);
+
   return (
-    <section
-      id="projects"
-      className="py-20 bg-gray-50 overflow-hidden"
-    >
+    <section id="projects" className="py-20 bg-gray-50 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-4 md:px-6">
 
         {/* Heading */}
@@ -42,8 +47,9 @@ export function EnhancedProjects() {
           onMouseLeave={() => setIsHovered(false)}
         >
           <motion.div
+            ref={containerRef}
             className="flex gap-4 md:gap-8"
-            animate={{ x: ["0%", "-50%"] }}
+            animate={{ x: [0, -width] }}
             transition={{
               duration: 25,
               ease: "linear",
@@ -63,15 +69,13 @@ export function EnhancedProjects() {
                   h-[200px] md:h-[220px]
                   rounded-2xl 
                   overflow-hidden 
-                  shadow-lg 
-                  hover:shadow-2xl 
-                  transition-all duration-300
+                  shadow-lg
                 "
               >
                 <img
                   src={img}
                   alt="project"
-                  className="w-full h-full object-cover hover:scale-110 transition duration-500"
+                  className="w-full h-full object-cover"
                 />
               </div>
             ))}
